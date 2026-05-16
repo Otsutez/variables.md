@@ -8,7 +8,7 @@ I'm using Obsidian to write a pentest handbook that have series of commands that
 sudo nmap -sV -sC -Pn -p- 192.168.1.1
 ```
 
-There's many commands that use the same IP address and when my target changes, I would like to be able to change all addresses dynamically. As a result I would like to create a plugin that implements a new Markdown element: variables.
+There are many commands that use the same IP address. When my target changed, I would like all addresses to change dynamically. As a result, my goal is to create a plugin that implements a new Markdown element: variables.
 
 ## Variables Specification
 
@@ -31,3 +31,9 @@ Obsidian should render it as
 ```
 nmap 192.168.1.1
 ```
+
+If we change the variable's value in the frontmatter, the rendered values should also change. Furthermore, variables should work anywhere including inside code blocks.
+
+## Disclaimer
+
+This plugin was written for educational purposes and will not be maintained.
